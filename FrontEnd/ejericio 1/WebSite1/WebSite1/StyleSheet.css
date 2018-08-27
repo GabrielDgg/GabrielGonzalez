@@ -1,0 +1,29 @@
+﻿body {
+}
+
+div 
+{
+    display:inline-block;
+
+}
+
+.caja{
+    width:120px;
+    height:120px;
+    background-color:#0026ff;
+}
+
+
+
+@media screen and (max-width:600px) {
+
+    .caja {
+        width: 120px;
+        height: 120px;
+        background-color: red;
+        display: table;
+        margin-top:10px;
+    }
+    
+
+}

@@ -1,0 +1,109 @@
+﻿@{ 
+
+    List<Popular> populars = new List<Popular>();
+    bool error = false;
+
+    if (IsPost)
+    {
+
+        string cadena = Request["cadena"];
+        cadena = cadena.Replace(" ", "");
+        cadena = cadena.Replace(",,", "");
+        string[] numerosString = cadena.Split(',');
+
+        try
+        {
+
+            for (int i = 0; i < numerosString.Length; i++)
+            {
+                Popular popular = new Popular();
+
+                if (!populars.Exists(p => p.Numero == int.Parse(numerosString[i])))
+                {
+                    for (int w = 0; w < numerosString.Length; w++)
+                    {
+                        if (numerosString[i] == numerosString[w])
+                        {
+                            popular.Popularidad++;
+
+                        }
+                    }
+                    popular.Numero = int.Parse(numerosString[i]);
+
+                    populars.Add(popular);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+
+            error = true;
+
+
+        }
+
+
+
+
+
+    }
+
+
+    populars = populars.OrderByDescending(i => i.Popularidad).ToList();
+
+
+
+
+}
+}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <div>
+            <label>
+                ingrese numero separados por coma
+            </label>
+            <form action="#" method="post">
+
+                <input type="text" name="cadena" value="" />
+                <input type="submit" name="botton" value="enviar" />
+            </form>
+        </div>
+
+
+        <div>
+
+            @for (int i = 0; i < populars.Count; i++)
+            {
+                int mayorPopularidad = populars[0].Popularidad;
+
+                if (populars[i].Popularidad == mayorPopularidad)
+                {
+                    <h3>Numero: @populars[i].Numero</h3>
+                    <h3>Popularidad: @populars[i].Popularidad</h3>
+                    <h6>--------------</h6>
+                }
+            }
+
+
+
+        </div>
+        @if (error)
+        {
+            <script>
+          
+                    alert("ingrese cadena con formato correcto");
+                
+            </script>
+        }
+        
+    </body>
+   
+</html>

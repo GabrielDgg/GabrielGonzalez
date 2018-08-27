@@ -1,0 +1,10 @@
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio 2.csprojAssemblyReference.cache
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio_2.Form1.resources
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio_2.Properties.Resources.resources
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio 2.csproj.GenerateResource.cache
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio 2.csproj.CoreCompileInputs.cache
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\bin\Debug\ejercicio 2.exe.config
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\bin\Debug\ejercicio 2.exe
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\bin\Debug\ejercicio 2.pdb
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio 2.exe
+c:\users\gagonzal\source\repos\ejerciciosTenaris\ejercicio 2\ejercicio 2\obj\Debug\ejercicio 2.pdb
