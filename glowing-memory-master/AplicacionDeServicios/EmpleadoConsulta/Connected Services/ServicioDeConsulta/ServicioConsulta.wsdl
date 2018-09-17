@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioConsulta" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/AplicacionDeServicios/ServicioConsulta.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/AplicacionDeServicios/ServicioConsulta.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/AplicacionDeServicios/ServicioConsulta.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AplicacionDeServicios" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioConsulta_BuscarPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorLegajo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorLegajo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorLegajo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorLegajoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorDNI_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorDNI" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorDNI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorDNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorApellido_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorApellido" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_BuscarPorApellido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPorApellidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_Todos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Todos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioConsulta_Todos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TodosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioConsulta">
+    <wsdl:operation name="BuscarPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorId" message="tns:IServicioConsulta_BuscarPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorIdResponse" message="tns:IServicioConsulta_BuscarPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorNombre" message="tns:IServicioConsulta_BuscarPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorNombreResponse" message="tns:IServicioConsulta_BuscarPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorLegajo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorLegajo" message="tns:IServicioConsulta_BuscarPorLegajo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorLegajoResponse" message="tns:IServicioConsulta_BuscarPorLegajo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorDNI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorDNI" message="tns:IServicioConsulta_BuscarPorDNI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorDNIResponse" message="tns:IServicioConsulta_BuscarPorDNI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorApellido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorApellido" message="tns:IServicioConsulta_BuscarPorApellido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/BuscarPorApellidoResponse" message="tns:IServicioConsulta_BuscarPorApellido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Todos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioConsulta/Todos" message="tns:IServicioConsulta_Todos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioConsulta/TodosResponse" message="tns:IServicioConsulta_Todos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioConsulta" type="tns:IServicioConsulta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarPorId">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/BuscarPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorNombre">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/BuscarPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorLegajo">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/BuscarPorLegajo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorDNI">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/BuscarPorDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPorApellido">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/BuscarPorApellido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Todos">
+      <soap:operation soapAction="http://tempuri.org/IServicioConsulta/Todos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioConsulta">
+    <wsdl:port name="BasicHttpBinding_IServicioConsulta" binding="tns:BasicHttpBinding_IServicioConsulta">
+      <soap:address location="http://localhost/AplicacionDeServicios/ServicioConsulta.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
