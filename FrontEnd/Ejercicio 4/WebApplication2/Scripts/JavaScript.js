@@ -1,4 +1,4 @@
-﻿alert("HOLA");
+﻿
 var motos = [];
 var BMW = new Object();
 BMW.marca = "BMW";
@@ -15,16 +15,14 @@ honda.modelo.push("model4");
 motos.push(honda);
 
 var json = JSON.stringify(motos) ;
-
-
-var enString = json;
-
 var salida = "";
 
-miObjato = JSON.parse(enString);
+miObjato = JSON.parse(json);
+
 for (i in miObjato) {
     salida += "Marca=" + miObjato[i].marca + '\n';
     salida += "Modelo=" + miObjato[i].modelo + '\n';
 }
 
 alert(salida);
+document.getElementById('Json').innerHTML = salida;
